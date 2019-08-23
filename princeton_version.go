@@ -198,6 +198,7 @@ var metaChar = map[byte]bool{
 }
 
 // this implementation assumes that the input regexp is right format
+// TODO: add format checking, and if wrong fomat detected, return error
 func buildNFA(regex string) *NFA {
 	g := make(graph)
 	ops := make(intStack, 0)
